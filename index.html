@@ -53,6 +53,11 @@
                         📈 監控工具
                     </button>
                 </li>
+                <li class="mr-2 flex-1" role="presentation">
+                    <button class="inline-block w-full p-4 text-gray-500 border-b-4 border-transparent rounded-t-lg hover:text-gray-600 hover:bg-gray-50 transition-colors duration-200" id="btn-drugs" type="button" role="tab" onclick="switchTab('drugs')">
+                        💊 治療藥物
+                    </button>
+                </li>
             </ul>
         </div>
 
@@ -610,6 +615,92 @@
                                 <strong class="text-purple-900">💡 觀念比喻：</strong><br>
                                 這類似於在毛孩皮下放置一個微型的「行車紀錄器」，它可以連續三年全天候記錄心律。當家長在家目擊毛孩出現狀況時，按下遙控器就能鎖定當時的心電圖。對於幾個月才發作一次的狀況，或是容易因為穿戴設備而緊張的動物，這是一個能幫助長期且客觀釐清病因的追蹤選項。
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= 治療藥物 (Drugs) 區塊 ================= -->
+            <div id="drugs" class="tab-content hidden">
+                <div class="mb-6 p-4 bg-emerald-50 text-emerald-800 rounded-lg border border-emerald-200">
+                    <h3 class="font-bold text-lg mb-1">⚕️ 醫病共享決策 (SDM)：藥物治療的目標與期待</h3>
+                    <p class="text-sm">抗心律不整藥物多數是為了「壓制異常放電」或「控制心跳速率」，而非根治心臟本身的結構退化。醫師將依據心電圖與監控結果，選擇急診注射或開立居家口服藥。在治療過程中，需教育家長<strong>「按時給藥不擅自停藥」</strong>的重要性，並搭配 Holter 或 ILR 定期評估療效與安全性。</p>
+                </div>
+
+                <!-- Category 1: 院內急診注射藥物 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2 flex items-center">
+                        <span class="text-3xl mr-2">🏥</span> 院內急救與介入注射藥物 (Emergency Injectables)
+                    </h3>
+                    <div class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                        <div class="p-4 grid md:grid-cols-2 gap-4">
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-gray-50">
+                                <h4 class="font-bold text-red-600 text-lg mb-1">Lidocaine (利多卡因)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> 急診首選用於具生命威脅的<strong>心室心搏過速 (VT)</strong> 或頻發的多源性 VPCs。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 貓咪對 Lidocaine 極度敏感，容易引發神經毒性與抽搐，若需用於貓隻必須大幅降低劑量並極緩慢給予。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-gray-50">
+                                <h4 class="font-bold text-blue-600 text-lg mb-1">Atropine (阿托品)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> 用於高迷走神經張力引起的<strong>嚴重竇性心搏過緩</strong>或第一、第二度房室傳導阻滯。亦作為 Atropine 試驗的診斷用藥。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 對於已經確診為病竇症候群 (SSS) 或傳導系統實質纖維化的病患，通常反應不佳。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-gray-50">
+                                <h4 class="font-bold text-green-600 text-lg mb-1">Calcium Gluconate (葡萄糖酸鈣)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> <strong>高血鉀症</strong>（如貓泌尿道阻塞）引發的心房靜止與心搏過緩的「保命藥」。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 不降鉀，但能穩定心肌細胞膜電位，爭取時間進行輸液與解除尿道阻塞。需緩慢靜脈推注並同步監控 ECG 以防心跳過慢。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-gray-50">
+                                <h4 class="font-bold text-purple-600 text-lg mb-1">Diltiazem / Esmolol (靜脈劑型)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> 急診用於壓制心室率過快的<strong>上心室心搏過速 (SVT)</strong> 或心房顫動 (AF)。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 具備負性肌力作用，若動物正處於急性鬱血性心衰竭狀態，使用時需極度謹慎評估血壓與收縮功能。</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 p-3 text-sm border-t border-gray-200">
+                            <strong class="text-gray-800">💡 觀念比喻 (向家長說明)：</strong><br>
+                            「這些急診點滴就像是心臟的『滅火器』，主要用來在危急時刻迅速把亂跳的心臟穩定下來。等毛孩狀況穩定後，我們還是需要轉換成居家的口服藥來長期保養。」
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: 居家長期口服藥物 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2 flex items-center">
+                        <span class="text-3xl mr-2">🏠</span> 居家長期口服藥物 (Home Care Oral Medications)
+                    </h3>
+                    <div class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                        <div class="p-4 grid md:grid-cols-2 gap-4">
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-orange-50">
+                                <h4 class="font-bold text-orange-700 text-lg mb-1">Sotalol (索他洛爾)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>臨床定位：</strong> 廣效型抗心律不整藥（具備 Class II 與 III 特性），臨床極常開立用於壓制<strong>心室早期收縮 (VPCs) 與 VT</strong>（如拳師犬 ARVC 的首選用藥）。亦可用於部分 SVT。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">用藥監控：</strong> 需留意其 Beta-blocker 效應可能導致的心跳過緩或血壓下降，建議配戴 Holter 或 ILR 評估壓制成效。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-orange-50">
+                                <h4 class="font-bold text-teal-700 text-lg mb-1">Diltiazem (地爾硫卓) / Digoxin (毛地黃)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>臨床定位：</strong> <strong>心房顫動 (AF)</strong> 居家「心室率控制 (Rate control)」的兩大主力。Diltiazem 減緩房室傳導，Digoxin 增加迷走神經張力。兩者常合併使用以達到最佳心率控制目標。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">用藥監控：</strong> Digoxin 治療指數狹窄，需留意食慾不振、嘔吐等中毒徵兆，並定期檢測血清濃度與腎功能。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-orange-50">
+                                <h4 class="font-bold text-amber-700 text-lg mb-1">Mexiletine (美西律)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>臨床定位：</strong> 口服版的 Lidocaine (Class Ib)。當單獨使用 Sotalol 無法有效壓制嚴重 VT 時，常作為<strong>合併用藥 (Combination therapy)</strong> 來加強對心室心律不整的控制。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">用藥監控：</strong> 腸胃道副作用（如噁心、嘔吐）相對常見，建議與食物一起投予來降低不適感。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-orange-50">
+                                <h4 class="font-bold text-pink-700 text-lg mb-1">Atenolol (阿替洛爾)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>臨床定位：</strong> β-受體阻斷劑 (Beta-blocker)。常輔助用於控制 SVT、降低因交感神經亢進引發的心律不整，或用於貓咪甲狀腺機能亢進 / 嚴重 HCM 的心率與動態流出道阻塞控制。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">用藥監控：</strong> 絕不可突然停藥（避免受體反彈上調引發心搏過速）。患有鬱血性心衰竭或氣喘的病患需謹慎使用。</p>
+                            </div>
+                        </div>
+                        <div class="bg-orange-100 p-3 text-sm border-t border-orange-200">
+                            <strong class="text-orange-900">💡 觀念比喻 (向家長說明)：</strong><br>
+                            「這些居家口服藥就像是心臟的『節拍控制器』或『避震器』，能幫助容易爆衝的心臟穩定規律地跳動。因為毛孩的心臟狀況會隨時間改變，所以這些藥物絕對<strong>不能自己突然停藥</strong>。我們需要搭配定期的心電圖紀錄器 (Holter / ILR) 追蹤，來幫毛孩量身調整最安全的藥物劑量。」
                         </div>
                     </div>
                 </div>
