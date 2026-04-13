@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犬貓常見心律不整與鑑別診斷臨床指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+        }
+        /* 隱藏捲軸但可滑動 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">犬貓心律不整：鑑別診斷與臨床決策指南</h1>
+            <p class="text-gray-600">快速查閱心律不整的背後原因與治療前必要檢查步驟</p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="bg-white rounded-t-xl shadow-sm border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px text-lg font-medium text-center" id="myTab" role="tablist">
+                <li class="mr-2 flex-1" role="presentation">
+                    <button class="inline-block w-full p-4 text-blue-600 border-b-4 border-blue-600 rounded-t-lg bg-blue-50 transition-colors duration-200" id="btn-dog" type="button" role="tab" onclick="switchTab('dog')">
+                        🐶 犬 (Canine)
+                    </button>
+                </li>
+                <li class="mr-2 flex-1" role="presentation">
+                    <button class="inline-block w-full p-4 text-gray-500 border-b-4 border-transparent rounded-t-lg hover:text-gray-600 hover:bg-gray-50 transition-colors duration-200" id="btn-cat" type="button" role="tab" onclick="switchTab('cat')">
+                        🐱 貓 (Feline)
+                    </button>
+                </li>
+                <li class="mr-2 flex-1" role="presentation">
+                    <button class="inline-block w-full p-4 text-gray-500 border-b-4 border-transparent rounded-t-lg hover:text-gray-600 hover:bg-gray-50 transition-colors duration-200" id="btn-cied" type="button" role="tab" onclick="switchTab('cied')">
+                        CIED 評估
+                    </button>
+                </li>
+                <li class="mr-2 flex-1" role="presentation">
+                    <button class="inline-block w-full p-4 text-gray-500 border-b-4 border-transparent rounded-t-lg hover:text-gray-600 hover:bg-gray-50 transition-colors duration-200" id="btn-tools" type="button" role="tab" onclick="switchTab('tools')">
+                        📈 監控工具
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content Area -->
+        <div id="tabContent" class="bg-white shadow-md rounded-b-xl p-4 md:p-6">
+            
+            <!-- ================= 犬 (DOG) 區塊 ================= -->
+            <div id="dog" class="tab-content block">
+                <div class="mb-6 p-4 bg-blue-50 text-blue-800 rounded-lg border border-blue-200">
+                    <strong>犬類重點提示：</strong> 犬最常見的心律不整通常與心臟結構退化（MMVD）、擴張型心肌病（DCM）、或嚴重的腹腔疾病（Spleen, Stomach, Sepsis）有關。
+                </div>
+
+                <!-- Dog: Sick Sinus Syndrome -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold flex items-center justify-between">
+                        病竇症候群 (Sick Sinus Syndrome, SSS) 與 竇性停搏 (Sinus Arrest)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">竇房結功能障礙導致無法產生衝動，心電圖可見極長的無心跳暫停（Pause > 2.5-3.0 秒）且無逃脫節律，常伴隨暈厥症狀。部分患犬會交替出現上心室心搏過速，稱為「心搏過緩-心搏過速症候群 (Brady-tachy syndrome)」。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">遺傳與退化（最常見）：</span>迷你雪納瑞（Miniature Schnauzer）、臘腸犬（Dachshund）、西高地白㹴、可卡犬等品種好發之竇房結退化與纖維化。</li>
+                                    <li><span class="font-semibold">自主神經失調：</span>呼吸道、胃腸道、神經系統疾病引起之高迷走神經張力（常表現為良性竇性停搏）。</li>
+                                    <li><span class="font-semibold">心臟局部疾病：</span>心房缺血、右心房腫瘤（如血管肉瘤 Hemangiosarcoma）壓迫、心房心肌炎。</li>
+                                    <li><span class="font-semibold">藥物或代謝異常：</span>高血鉀症、甲狀腺功能低下症、抗心律不整藥物過量（如 β-受體阻斷劑）。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>24小時 Holter 與長期監控 (ILR)：</strong><span class="text-red-600 font-semibold">【確診關鍵】</span>靜態心電圖診斷難度高，需仰賴 Holter 記錄最長之暫停時間 (Pause) 及是否伴隨 Brady-tachy syndrome。此結果將直接影響用藥決策。若暈厥偶發，可考慮植入皮下心電圖紀錄器 (ILR) 以釐清病因。</li>
+                                    <li><strong>Atropine Response Test（阿托品試驗）：</strong>測試迷走神經之影響程度。典型 SSS 患犬對 Atropine 通常<span class="text-red-600 font-semibold">反應不佳</span>（心率無法提升至 130-140 bpm 以上）。</li>
+                                    <li><strong>⚠️ 迷走神經刺激之禁忌：</strong>若已高度懷疑為 SSS，即使當下發生心搏過速 (Brady-tachy)，也<span class="text-red-600 font-semibold">極度不建議</span>盲目使用迷走神經刺激（如壓迫眼球或頸動脈按摩）。因其竇房結功能已衰退，強烈抑制後極可能引發長時間竇性停搏甚至心跳停止。</li>
+                                    <li><strong>心律調節器 (Pacemaker) 評估：</strong>針對具暈厥症狀的典型 SSS 患犬，裝置心律調節器為唯一有效且能延長存活期之治療方式。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dog: SVPCs / SVT -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold flex items-center justify-between">
+                        上心室早期收縮 (SVPCs) 與 上心室心搏過速 (SVT)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">起源於竇房結以外的心房或房室結，特徵為提前出現的窄 QRS 波。連續發作時稱為 SVT，心跳率可高達 200-300 bpm，因心室舒張期過短，易引發心因性休克或急性心衰竭惡化。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">嚴重的心房擴張：</span>二尖瓣退化 (MMVD)、擴張型心肌病 (DCM)、先天性心臟病 (如 PDA, SAS) 導致心房肌伸展與電氣重塑。</li>
+                                    <li><span class="font-semibold">房室折返性心搏過速 (AVRT/AVNRT)：</span>存在副傳導路徑 (Accessory pathway)，如拉布拉多犬好發的預激症候群 (WPW syndrome)。</li>
+                                    <li><span class="font-semibold">心臟以外的刺激：</span>低血氧、嚴重胃腸道發炎、敗血症、支氣管肺炎。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>迷走神經刺激 (Vagal Maneuvers)：</strong><span class="text-red-600 font-semibold">【急診診斷與介入】</span>在確定非病竇症候群前提下，對頸動脈竇按摩或輕壓眼球。若心律突然恢復正常，強烈暗示為折返性 SVT；若僅短暫減速隨後又加速，可幫助在心電圖上顯露隱藏的 P 波 (P' wave)，以利確診。</li>
+                                    <li><strong>心臟超音波：</strong>檢查心房大小是否足以成為致病基質 (Substrate)，並評估心室收縮力，這決定了能否安全使用負性肌力藥物 (如 Diltiazem 或 Beta-blockers)。</li>
+                                    <li><strong>12 導程心電圖 (12-Lead ECG)：</strong>若懷疑有副傳導路徑 (WPW)，需使用 12 導程尋找異常的 Delta 波。</li>
+                                    <li><strong>長期監控與追蹤 (SDM)：</strong>針對陣發性 SVT，若發作時間短暫、家長難以察覺，或給予抗心律不整藥物後需確認控制成效，建議定期配戴 <strong>Holter</strong>。若暈厥頻率極低（如數月發作一次），可考慮植入<strong>皮下植入式心電圖紀錄器 (ILR)</strong> 進行長期客觀監控。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dog: VPCs / VT -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold flex items-center justify-between">
+                        心室早期收縮 (VPCs) 與 心室心搏過速 (VT)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">寬大畸形的 QRS 波群。成因非常廣泛，需仔細排除非心臟的「腹部與全身性」問題（Rule of Spleen, Stomach, Sepsis）。健康大型犬 24 小時偶發 <20 次屬正常。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">遺傳與原發性心肌病：</span>拳師犬致心律不整性右心室心肌病 (ARVC)、杜賓犬隱性 DCM、德國牧羊犬遺傳性心律不整。</li>
+                                    <li><span class="font-semibold">腹腔與全身性疾病：</span><span class="text-red-600 font-semibold">【極常見】</span>胃擴張扭轉 (GDV)、脾臟腫瘤/扭轉/切除術後、敗血症、胰臟炎、子宮蓄膿。</li>
+                                    <li><span class="font-semibold">繼發性與代謝：</span>心肌缺血、創傷性心肌炎、低血鉀、低血鎂、劇烈疼痛與麻醉藥物影響。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>腹部影像學 (Abdominal US / X-ray)：</strong><span class="text-red-600 font-semibold">【優先排除】</span>進行腹部觸診並配合影像學檢查，確認是否具備脾臟腫塊、GDV 或其他急腹症。</li>
+                                    <li><strong>24小時 Holter 與長期監控 (ILR)：</strong><span class="text-red-600 font-semibold">【量化評估】</span>靜態 ECG 無法確實反映嚴重程度。Holter 用於量化 VPC 發生頻率（>1000次/天、出現 R-on-T 現象，或連續 VT 方考慮積極給藥）。若為陣發性暈厥且 24 小時內難以捕捉，或需長期追蹤抗心律不整藥物療效（尤其是 ARVC 或 DCM 犬種），<strong>建議評估植入皮下心電圖紀錄器 (ILR)</strong> 以客觀記錄長期的控制狀況。</li>
+                                    <li><strong>心臟超音波：</strong>評估是否罹患 DCM 或存在心室結構異常。</li>
+                                    <li><strong>心肌肌鈣蛋白 (cTnI)：</strong>評估心肌損傷程度（如心肌炎或創傷性心肌炎）。</li>
+                                    <li><strong>電解質與血氣分析：</strong>確認是否併發低血鉀、低血鎂或酸鹼失衡等代謝異常。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dog: AV Blocks -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold">
+                        房室傳導阻滯 (1st, 2nd, 3rd Degree AV Block)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">從 PR 間期延長 (1度)，到部分 P 波未傳導 (2度)，甚至心房心室完全分離、心室率極慢且引發暈厥 (3度)。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">高迷走神經張力：</span>呼吸道、腸胃道、眼科疾病，或單純因為是短吻犬/運動員犬 (多為1度或2度Mobitz I)。</li>
+                                    <li><span class="font-semibold">代謝與內分泌：</span><span class="text-red-600">高血鉀症</span> (如艾迪生氏症 Addison's disease)、甲狀腺功能低下。</li>
+                                    <li><span class="font-semibold">藥物與毒素：</span>β-blocker、鈣離子通道阻斷劑、Digoxin、Xylazine/Dexmedetomidine。</li>
+                                    <li><span class="font-semibold">結構與退化：</span>特發性傳導系統纖維化 (高齡犬常見的3度AV block原因)、心肌炎、鉤端螺旋體病。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>Atropine Response Test (阿托品試驗)：</strong>給予 Atropine (0.02-0.04 mg/kg IV/IM)。若心律恢復正常，提示為「迷走神經性」；若無顯著反應，則高度懷疑為「結構性/病理性」阻滯。</li>
+                                    <li><strong>急診血檢 (基礎生化與電解質)：</strong><span class="text-red-600 font-semibold">【絕對必要】</span>需立即排除具生命威脅之高血鉀症 (Hyperkalemia)。</li>
+                                    <li><strong>詳細用藥史：</strong>確認家長是否誤餵人類心血管藥物，或動物本身正服用降血壓/心臟相關藥物。</li>
+                                    <li><strong>傳染病篩檢：</strong>若伴隨發燒或肝腎指數異常，建議進行鉤端螺旋體、萊姆病、查加斯病等相關篩檢。</li>
+                                    <li><strong>24小時 Holter 與長期監控 (ILR)：</strong><span class="text-blue-700 font-semibold">【評估間歇性惡化】</span>靜態心電圖僅能反映短暫狀態（且動物在診間常因緊張致交感神經興奮，可能掩蓋真實病情）。若動物具「暈厥或虛弱」病史，但診間僅見 1 度或偶發 2 度 AV block，<strong>建議先安排 Holter</strong>。若 Holter 檢查後仍需釐清（例如未記錄到發作，或懷疑間歇性惡化為進階 2 度或 3 度阻滯），可考慮裝置<strong>皮下植入式心電圖紀錄器 (ILR, 如 Medtronic LINQ)</strong> 進行長期無縫監控。</li>
+                                    <li><strong>心律調節器 (Pacemaker) 評估：</strong>針對具臨床症狀（如暈厥）的進階二度或三度 AV Block，此通常為長期治療之唯一選項。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dog: Bundle Branch Blocks (RBBB & LAFB) -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold">
+                        心室內傳導阻滯：右束支阻滯 (RBBB) 與 左前分支阻滯 (LAFB)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">這類阻滯不一定會改變心率，但會改變 QRS 複合波的形態。RBBB 呈現寬大 QRS 與深 S 波（右室去極化延遲）；LAFB 則呈現極度的左軸偏移 (Left Axis Deviation)，在導程 II、III、aVF 出現深 S 波，但 QRS 寬度多屬正常或微寬。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">RBBB 右心負荷增加：</span>心絲蟲感染 (Heartworm disease)、嚴重肺高壓 (Pulmonary hypertension)、肺動脈狹窄 (PS)。</li>
+                                    <li><span class="font-semibold">RBBB 正常變異與其他：</span>米格魯 (Beagle) 常見之先天性正常變異；致心律不整性右心室心肌病 (ARVC)、查加斯病 (Chagas disease) 或外傷。</li>
+                                    <li><span class="font-semibold">LAFB 左前分支阻滯：</span>在犬較少見（貓極常見）。若出現，常暗示存在局部的心肌缺血、微小梗塞、嚴重的左心室肥大或心肌纖維化。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>心絲蟲篩檢與胸腔 X 光：</strong><span class="text-red-600 font-semibold">【犬 RBBB 優先排除】</span>確認是否因心絲蟲或慢性呼吸道疾病導致右心擴張與肺高壓。</li>
+                                    <li><strong>心臟超音波：</strong>嚴格評估右心室 (針對 RBBB) 或左心室 (針對 LAFB) 的結構、壁厚與壓力狀態（如測量三尖瓣逆流流速以評估肺動脈壓）。</li>
+                                    <li><strong>無臨床症狀之評估：</strong>若為單純 RBBB 且超音波下心臟結構完全正常（無右心擴大），可能僅為品種先天性變異，預後良好，不需給予抗心律不整藥物。</li>
+                                    <li><strong>間歇性惡化之長期監控 (ILR / Holter)：</strong>若犬隻有不明原因的虛弱或暈厥，但診間僅見 BBB，需高度懷疑是否已間歇性惡化為進階傳導阻滯（如雙束支阻滯進展為第三度 AV Block）。此時建議配戴 <strong>Holter</strong>，或植入 <strong>ILR</strong> 進行長效追蹤，以協助釐清暈厥原因。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ================= 貓 (CAT) 區塊 ================= -->
+            <div id="cat" class="tab-content hidden">
+                <div class="mb-6 p-4 bg-orange-50 text-orange-800 rounded-lg border border-orange-200">
+                    <strong>貓類重點提示：</strong> 貓的心律不整通常暗示著潛在的嚴重疾病。最常見的是繼發於肥厚型心肌病（HCM）、甲狀腺機能亢進、或是泌尿道阻塞（FLUTD）引起的電解質異常。
+                </div>
+
+                <!-- Cat: SVPCs / SVT -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold flex items-center justify-between">
+                        上心室早期收縮 (SVPCs) 與 上心室心搏過速 (SVT)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">貓常見的快速心律不整之一。常與心房的擴大或內分泌異常有關，若未積極尋找原因，極易惡化為心衰竭或誘發致命的動脈血栓 (ATE)。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">內分泌疾病：</span><span class="text-red-600">甲狀腺機能亢進 (Hyperthyroidism)</span> 是引發貓 SVT 或頻繁 SVPCs 的極常見原因，由過高的代謝狀態與交感神經驅動。</li>
+                                    <li><span class="font-semibold">心室充盈受阻導致心房擴張：</span>所有貓心肌病 (HCM, RCM, UCM) 均會造成左心房壓力升高與急遽擴張。</li>
+                                    <li><span class="font-semibold">先天性心臟病：</span>二尖瓣或三尖瓣發育不良、心房中膈缺損 (ASD)。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>總甲狀腺素 (Total T4) 檢測：</strong><span class="text-red-600 font-semibold">【絕對必要】</span>特別是 7 歲以上中老年貓，甲亢是可逆轉的心臟病因，治療甲亢即可大幅消除心律不整。</li>
+                                    <li><strong>心臟超音波：</strong>嚴格評估左心房大小。若左心房顯著擴張，SVPCs 就是極高風險的「血栓警訊」，需考慮立刻開始使用抗血小板藥物 (如 Clopidogrel)。</li>
+                                    <li><strong>血壓量測 (NIBP)：</strong>排除高血壓造成的繼發性心臟變化與交感神經刺激。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cat: VPCs / VT -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold flex items-center justify-between">
+                        心室早期收縮 (VPCs) 與 心室心搏過速 (VT)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">貓隻出現 VPCs 罕見為生理性正常現象，通常暗示心室肌已受實質性損害，或正面臨嚴重的全身性疾病壓力。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">心肌病變 (最常見)：</span>肥厚型心肌病 (HCM)、未分類心肌病 (UCM)、限制型心肌病 (RCM)、貓 ARVC。</li>
+                                    <li><span class="font-semibold">內分泌疾病：</span><span class="text-red-600">甲狀腺機能亢進 (Hyperthyroidism)</span>，常引發心肌肥厚與心律不整。</li>
+                                    <li><span class="font-semibold">全身性/代謝：</span>慢性腎病 (CKD) 伴隨的低血鉀或高血壓、全身性發炎。</li>
+                                    <li><span class="font-semibold">缺血/血栓：</span>動脈血栓栓塞 (ATE) 引發的心肌局部缺血與再灌注損傷。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>心臟超音波：</strong><span class="text-red-600 font-semibold">【首要步驟】</span>評估左心室壁厚度 (HCM)、左心房大小及是否存在自發性回音 (SEC，為血栓高風險指標)。</li>
+                                    <li><strong>總甲狀腺素 (Total T4)：</strong>7 歲以上熟齡貓為必檢項目。若為甲狀腺機能亢進，經治療後心律不整多可獲改善。</li>
+                                    <li><strong>血壓量測 (NIBP)：</strong>排除高血壓引起之心室肥厚（二次性 HCM）與電重塑。</li>
+                                    <li><strong>腎功能與電解質 (BUN/Crea/K)：</strong>低血鉀為誘發貓隻 VPCs 之常見代謝因素。</li>
+                                    <li><strong>長期監控 (Holter 與 ILR)：</strong><span class="text-blue-700 font-semibold">【陣發性暈厥追蹤】</span>貓隻穿戴體表 24 小時 Holter 的難度與緊迫性較高，可能因活動量下降而影響記錄代表性。若貓咪具暈厥病史但靜態 ECG 未能記錄到異常，或高度懷疑有間歇性心室心律不整，可考慮裝置<strong>皮下植入式心電圖紀錄器 (ILR, 例如 Medtronic LINQ)</strong> 進行長期監控，以降低反覆穿脫設備的緊迫，並客觀記錄異常事件。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cat: Atrial Fibrillation -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold">
+                        心房顫動 (Atrial Fibrillation, AF)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">在貓不常見，一旦出現通常代表心房已經「極度擴張」，且預後通常不佳（高機率併發心衰竭與血栓）。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">嚴重心肌病晚期：</span>末期 HCM、RCM、UCM 導致左心房嚴重擴張與壓力上升。</li>
+                                    <li><span class="font-semibold">先天性心臟病：</span>心房中膈缺損 (ASD) 晚期。</li>
+                                    <li><span class="font-semibold">甲狀腺機能亢進合併心肌病。</span></li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>心臟超音波：</strong>確認心房擴大程度。評估左心耳是否有血栓形成 (Thrombus) 或雲霧狀回音 (SEC)。</li>
+                                    <li><strong>血栓預防計畫：</strong><span class="text-red-600 font-semibold">【治療關鍵】</span>貓出現 AF 幾乎必須立刻開始使用抗血小板藥物（如 Clopidogrel）或抗凝血劑（Rivaroxaban/Apixaban）。</li>
+                                    <li><strong>胸腔 X 光：</strong>確認是否有肺水腫 (Pulmonary edema) 或胸水 (Pleural effusion)，因為這些貓極容易處於鬱血性心衰竭狀態。</li>
+                                    <li><strong>心跳率控制評估：</strong>可考慮使用 Diltiazem 或 Beta-blockers，但需小心貓的心衰竭狀態。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cat: Bradycardia / AV blocks -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold">
+                        心搏過緩 與 房室傳導阻滯 (Bradycardia & AV blocks)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4">貓隻於診間之心率通常偏快（>180 bpm）。若測得心率 < 140 bpm，必須視為異常。<br><span class="font-bold text-blue-600">【貓科特異性 (Feline Specifics)】：</span>與犬隻不同，貓罹患第三度房室傳導阻滯 (3rd-degree AV block) 時，其心室逃脫節律往往較高 (常介於 100-120 bpm)。因此，許多高齡患貓並無明顯暈厥症狀，未必需要立即裝置節律器，多以密切保守觀察為主。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">高血鉀症 (Hyperkalemia)：</span><span class="text-red-600">最常見急診原因。</span>貓下泌尿道阻塞 (FLUTD)、寡尿型急性腎衰竭。常表現為無 P 波之「心房靜止 (Atrial Standstill)」。</li>
+                                    <li><span class="font-semibold">退化性傳導系統疾病：</span>高齡貓不明原因的傳導束纖維化，是引發貓原發性高階或第三度 AV block 的常見原因。</li>
+                                    <li><span class="font-semibold">原發性心肌病：</span>少數末期 HCM 貓咪的傳導系統受損或纖維化侵犯。</li>
+                                    <li><span class="font-semibold">低體溫與藥物影響：</span>嚴重休克、麻醉後未保暖；Dexmedetomidine, Opioids 作用。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>觸診膀胱與急診血檢：</strong><span class="text-red-600 font-semibold">【第一優先】</span>應立即觸診膀胱是否脹大堅硬，並採血檢驗鉀離子 (Potassium)。若鉀超標，優先給予 Calcium gluconate。</li>
+                                    <li><strong>確認是否為心房靜止：</strong>ECG 若呈現心搏過緩、無 P 波、寬 QRS 及高聳 T 波，高度強烈暗示高血鉀症。</li>
+                                    <li><strong>臨床症狀與長期監控 (SDM)：</strong>確診進階 2 度或 3 度 AV block 後，若心跳仍 >100 bpm 且無暈厥症狀，雖暫不需手術，但<span class="text-red-600 font-semibold">建議建立追蹤計畫</span>。由於家長在家較難第一時間察覺心率變化，建議定期安排 <strong>Holter 監測</strong>。若診間僅見偶發 2 度阻滯但動物有不明原因暈厥，可考慮裝置<strong>皮下植入式心電圖紀錄器 (ILR, 例如 Medtronic LINQ)</strong> 進行長期追蹤，以釐清暈厥原因並確保安全性。</li>
+                                    <li><strong>Atropine 試驗：</strong>若已排除高血鉀且體溫正常，可給予 Atropine 測試是否為迷走神經張力過高所致。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cat: Bundle Branch Blocks (LAFB & RBBB) -->
+                <div class="mb-8 border rounded-lg overflow-hidden border-gray-200">
+                    <div class="bg-slate-800 text-white px-5 py-3 text-xl font-bold">
+                        左前分支傳導阻滯 (LAFB) 與 右束支傳導阻滯 (RBBB)
+                    </div>
+                    <div class="p-5">
+                        <p class="text-gray-700 mb-4"><span class="font-bold text-red-600">【貓科極常見】</span>LAFB 在貓的臨床心電圖中非常普遍，特徵為極度的左軸偏移 (LAD, 導程 II, III, aVF 呈現深 S 波)，QRS 寬度正常。RBBB 則相對少見，表現為寬大的 QRS 波群。</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- 原因 -->
+                            <div>
+                                <h4 class="text-lg font-bold text-red-600 border-b-2 border-red-100 mb-2">🩸 鑑別診斷 / 可能原因</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><span class="font-semibold">心室肥大與心肌病 (LAFB)：</span><strong>肥厚型心肌病 (HCM)</strong> 是導致貓發生 LAFB 的最重要且最常見原因。心肌增厚與纖維化會切斷左前分支的傳導路徑。</li>
+                                    <li><span class="font-semibold">內分泌疾病 (LAFB)：</span>甲狀腺機能亢進 (Hyperthyroidism) 繼發的心室肥厚。</li>
+                                    <li><span class="font-semibold">特發性/高齡退化 (LAFB)：</span>部分高齡貓在心室結構正常下，也會因傳導系統局部退化而出現 LAFB。</li>
+                                    <li><span class="font-semibold">右心負荷 (RBBB)：</span>先天性心臟病（如心室中膈缺損 VSD、三尖瓣發育不良）、心絲蟲感染或嚴重哮喘繼發的右心擴張。</li>
+                                </ul>
+                            </div>
+                            <!-- 檢查步驟 -->
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
+                                    <li><strong>心臟超音波：</strong><span class="text-red-600 font-semibold">【絕對必要】</span>在貓隻心電圖上看到 LAFB (左軸偏移) 時，<strong>強烈建議</strong>進行心超掃描，以確診或排除潛在的 HCM，並評估左心房大小及血栓風險。</li>
+                                    <li><strong>總甲狀腺素 (Total T4) 檢測：</strong>高齡貓若發現 LAFB，務必排查甲狀腺機能亢進。</li>
+                                    <li><strong>貓心絲蟲/抗體篩檢：</strong>針對出現 RBBB 的貓隻，若伴隨呼吸道症狀，需列入鑑別診斷。</li>
+                                    <li><strong>臨床決策：</strong>單純的 LAFB 或 RBBB 若未伴隨心律不整（如 VPCs 或頻脈），本身<strong>不需要</strong>使用抗心律不整藥物治療，重點在於「找出背後造成結構改變的元兇」。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ================= CIED 評估區塊 ================= -->
+            <div id="cied" class="tab-content hidden">
+                <div class="mb-6 p-4 bg-teal-50 text-teal-800 rounded-lg border border-teal-200">
+                    <h3 class="font-bold text-lg mb-1">⚕️ 醫病共享決策 (SDM) 提示：犬貓節律器植入評估</h3>
+                    <p class="text-sm">本指引改編自人類醫學「ACC/AHA CIED 適當性準則 (AUC)」，並針對小動物臨床實務進行深度在地化。<strong>【重要差異】：</strong>人類 CIED 包含去顫器(ICD)與再同步化(CRT)，但在犬貓，因體積與費用限制，95% 以上均為治療「心搏過緩」的<strong>永久性心律調節器 (PPM)</strong>。請以此表輔助寵物家長評估「臨床利益是否大於手術與長期帶機風險」。</p>
+                </div>
+
+                <!-- 1. AUC 分級說明與臨床情境 (小動物改編版) -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">🎯 節律器植入適當性準則 (Veterinary AUC)</h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <!-- Appropriate (A) -->
+                        <div class="bg-white border-2 border-green-500 rounded-lg shadow-sm">
+                            <div class="bg-green-500 text-white p-3 font-bold text-lg text-center">適當 (Appropriate, A)</div>
+                            <div class="p-4">
+                                <p class="text-sm font-semibold text-green-800 mb-2 border-b border-green-200 pb-2">利益明顯大於風險，屬「標準且強烈建議」之醫療處置，能顯著改善存活率或消除暈厥。</p>
+                                <ul class="text-sm text-gray-700 space-y-2 list-disc pl-4">
+                                    <li><strong>具症狀之高階傳導阻滯：</strong>伴隨暈厥或嚴重虛弱的第三度 (Complete) AV Block，或進階第二度 (Mobitz II) AV Block。</li>
+                                    <li><strong>具症狀之病竇症候群 (SSS)：</strong>已確認造成暈厥或陣發性無力之 SSS 或長時期竇性停搏。</li>
+                                    <li><strong>心房靜止 (Atrial Standstill)：</strong>排除高血鉀等可逆因素後，確診之原發性心房靜止。</li>
+                                    <li><strong>醫源性損傷：</strong>因射頻消融術 (如 AV node ablation) 或外科手術導致之永久性傳導阻滯。</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- May Be Appropriate (M) -->
+                        <div class="bg-white border-2 border-yellow-500 rounded-lg shadow-sm">
+                            <div class="bg-yellow-500 text-white p-3 font-bold text-lg text-center">可能適當 (May Be, M)</div>
+                            <div class="p-4">
+                                <p class="text-sm font-semibold text-yellow-800 mb-2 border-b border-yellow-200 pb-2">具備潛在利益，但臨床證據未明朗或個體差異大，需與家屬「充分討論期望值」。</p>
+                                <ul class="text-sm text-gray-700 space-y-2 list-disc pl-4">
+                                    <li><strong>無症狀之高危險群：</strong>偶然於 ECG 發現第三度 AV block 或極長之竇性停搏，雖無明確暈厥史，但心室率極慢具高猝死風險者。</li>
+                                    <li><strong>難治型反射性暈厥：</strong>嚴重的迷走神經亢進引起之暈厥，且對內科藥物 (如抗膽鹼藥物) 無反應。</li>
+                                    <li><strong><span class="text-gray-500">【罕見】</span>植入式去顫器 (ICD)：</strong>針對具遺傳性猝死風險 (如拳師犬 ARVC、杜賓犬 DCM) 且有持續性 VT 紀錄者。<span class="text-xs text-red-500">(受限於經費、設備與技術，為極少數之個案考量)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Rarely Appropriate (R) -->
+                        <div class="bg-white border-2 border-red-400 rounded-lg shadow-sm">
+                            <div class="bg-red-400 text-white p-3 font-bold text-lg text-center">很少適當 (Rarely, R)</div>
+                            <div class="p-4">
+                                <p class="text-sm font-semibold text-red-800 mb-2 border-b border-red-200 pb-2">無明確優勢或風險大於利益，通常「不建議植入」。</p>
+                                <ul class="text-sm text-gray-700 space-y-2 list-disc pl-4">
+                                    <li><strong>可逆性之傳導異常：</strong>因高血鉀症、甲狀腺功能低下、或抗心律不整藥物過量引起之暫時性心跳過緩。</li>
+                                    <li><strong>生理性/高迷走神經張力：</strong>無臨床症狀之第一度 AV block 或第二度 Mobitz I (常見於休息狀態之犬隻)。</li>
+                                    <li><strong>末期合併症：</strong>動物本身罹患壽命預期極短之嚴重非心臟疾病 (如末期轉移性腫瘤、多重器官衰竭)，無法從節律器中獲得生活品質提升。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 帶機風險 (針對小動物調整的溝通重點) -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-gray-200 pb-2">⚠️ 長期帶機風險與動物照護須知</h3>
+                    <p class="text-sm text-gray-600 mb-4">🐾 <strong>寵物家長須知：</strong>小動物因四肢著地且無法理解「術後限制活動」，其併發症樣貌與人類有所不同。隨著時間推移與電池更換次數增加，下列風險機率亦會連動上升。</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-slate-800 flex items-center mb-2"><span class="text-xl mr-2">⚙️</span> 1. 導線位移與硬體問題</h4>
+                            <p class="text-sm text-gray-700">犬隻導線通常經頸靜脈進入右心室，術後初期若劇烈跑跳、甩動頸部，極易發生<strong>導線位移 (Lead dislodgement)</strong> 導致失去起搏。貓咪因多採用心外膜導線，較無靜脈內位移風險，但長期可能有起搏閾值上升的硬體老化問題。</p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <h4 class="font-bold text-red-800 flex items-center mb-2"><span class="text-xl mr-2">🦠</span> 2. 囊袋併發症與感染</h4>
+                            <p class="text-sm text-gray-700"><strong>犬隻：</strong>電池多埋於頸部皮下，體型瘦小者易發生<strong>皮膚破潰外露或囊袋血腫 (Seroma)</strong>。<br><strong>貓咪：</strong>多採用腹腔內放置電池，雖無皮下破潰風險，但仍有腹腔內感染或游離可能。一旦發生深部感染，必須<strong>「全套拔除導線與電池」</strong>並長期投予抗生素，處理難度極高。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-slate-800 flex items-center mb-2"><span class="text-xl mr-2">🫀</span> 3. 血流力學與心衰竭惡化</h4>
+                            <p class="text-sm text-gray-700">穿越三尖瓣的導線可能干擾瓣膜閉合，引發或加重<strong>三尖瓣逆流 (TR)</strong>。此外，長期高比例由右心室起搏，可能引發<strong>「節律器誘發心肌病變 (PICM)」</strong>，導致左心室收縮不同步，未來需搭配心臟病藥物控制。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-slate-800 flex items-center mb-2"><span class="text-xl mr-2">🧲</span> 4. 醫療干擾與生活限制</h4>
+                            <p class="text-sm text-gray-700">植入後，動物未來進行 <strong>MRI 檢查</strong>可能受限或具高風險。進行手術使用電刀、或體外碎石機時，皆須防範強烈電磁干擾 (EMI)。需教育家長避免讓動物頸部接觸高磁場環境。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-slate-800 flex items-center mb-2"><span class="text-xl mr-2">⚡</span> 5. 植入式去顫器 (ICD) 特有限制</h4>
+                            <p class="text-sm text-gray-700">若為極少數植入 ICD 之動物，因過度偵測引發的<strong>不適當電擊</strong>會造成動物劇烈痛楚與驚嚇。頻繁適當或不適當電擊皆可能引發動物的創傷後壓力症候群 (PTSD) 與行為改變。</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-slate-800 flex items-center mb-2"><span class="text-xl mr-2">🏥</span> 6. 終身追蹤與更換手術負擔</h4>
+                            <p class="text-sm text-gray-700">節律器電池壽命約 <strong>5 至 10 年</strong>。當電池耗盡時，需再次全身麻醉進行更換手術。此外，定期（約半年至一年）需返回具備<strong>特定廠商程控儀 (Programmer)</strong> 之專科醫院進行遙測檢查與參數微調，是一筆長期的經濟與時間負擔。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ================= 監控工具 (Tools) 區塊 ================= -->
+            <div id="tools" class="tab-content hidden">
+                <div class="mb-6 p-4 bg-indigo-50 text-indigo-800 rounded-lg border border-indigo-200">
+                    <h3 class="font-bold text-lg mb-1">⚕️ 醫病共享決策 (SDM)：心律監控工具之選擇</h3>
+                    <p class="text-sm">心律不整常具備「陣發性」特徵。臨床上常以比喻輔助家長理解：<strong>靜態心電圖</strong>如同拍攝「快照」；<strong>Holter</strong> 類似「24小時連續錄影」；而 <strong>ILR</strong> 則為長達數年的「行車紀錄器」。醫師將依據動物的暈厥頻率、體型及對外在設備的緊迫耐受度，與家長共同評估最適切的監控方式。</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 1. 靜態心電圖 (Resting ECG) -->
+                    <div class="border-2 border-gray-300 rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-gray-100 px-5 py-3 border-b border-gray-300 flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-gray-800">1. 院內靜態心電圖 (Resting ECG)</h3>
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">常規紀錄：1~5 分鐘</span>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-gray-700 mb-4"><strong class="text-gray-900">📍 臨床定位：</strong> 基礎的心血管篩檢工具。適用於確認「持續性」的心律不整（如心房顫動 AF）、評估基準心率，或於急診當下判斷是否存在具生命威脅之心律異常（如室速 VT 或高血鉀症）。</p>
+                            
+                            <!-- 視覺化輔助 (影像) -->
+                            <div class="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-center bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <figure class="flex flex-col items-center">
+                                    <img src="https://ellir.my/wp-content/uploads/2024/02/2-6.jpg" alt="" class="rounded-lg shadow h-48 md:h-64 object-contain border border-gray-100" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Image+Unavailable';">
+                                    <figcaption class="text-xs text-gray-500 mt-2 font-medium">院內配備之高階 12 導程靜態心電圖儀 (BTL 8 ECG 12 Channel)</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-2">
+                                <div class="md:col-span-2">
+                                    <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                        <li><strong class="text-gray-900">優勢：</strong> 檢查快速且診斷價值高。院內配置之高階設備（如 <strong>BTL 8 ECG 12 Channel</strong>）能進行完整 12 導程同步分析，提供多個心臟電生理視角，有助於精確定位異常波型之起源（如心軸偏移、心室擴大或副傳導路徑）。</li>
+                                        <li><strong class="text-gray-900">限制：</strong> 記錄時間極短，容易遺漏陣發性異常事件。此外，動物於診間常因緊張致交感神經張力上升，可能掩蓋平時於放鬆狀態下才會發生的高階房室傳導阻滯或病竇症候群。</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded border border-gray-200 text-sm h-fit">
+                                    <strong class="text-gray-800">💡 觀念比喻：</strong><br>
+                                    這項檢查就像是為心臟拍一張瞬間的「快照」，能確認毛孩當下的心律狀況。如果毛孩是不定時出現暈倒，這短短幾分鐘的檢查可能無法剛好記錄到發作的瞬間，這時就需要考慮使用進階的連續監控工具。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 24小時動態心電圖 (Holter) -->
+                    <div class="border-2 border-blue-400 rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-blue-50 px-5 py-3 border-b border-blue-200 flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-blue-800">2. 動態心電圖 (Holter Monitor)</h3>
+                            <span class="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">常規紀錄：24~48 小時</span>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-gray-700 mb-4"><strong class="text-gray-900">📍 臨床定位：</strong> 評估心律不整負荷量 (Burden) 的標準工具。適用於發生頻率較高（如每日發生）的異常，或用以客觀評估抗心律不整藥物的控制成效。</p>
+                            
+                            <!-- 視覺化輔助 (影像) -->
+                            <div class="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-center bg-white p-4 rounded-lg border border-blue-100 shadow-sm">
+                                <figure class="flex flex-col items-center">
+                                    <img src="https://128774737.cdn6.editmysite.com/uploads/1/2/8/7/128774737/E6ASWZUVRUDOJ7BZ2LEHIOMC.jpeg?width=2400&optimize=medium" alt="" class="rounded-lg shadow h-48 md:h-64 object-contain border border-gray-100" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300?text=Image+Unavailable';">
+                                    <figcaption class="text-xs text-gray-500 mt-2 font-medium">大型犬（如杜賓）配戴 Holter 紀錄器與防護背心之實際狀況</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="grid md:grid-cols-3 gap-4 mb-2">
+                                <div class="md:col-span-2">
+                                    <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                                        <li><strong class="text-gray-900">優勢：</strong> 可記錄動物在日常環境（睡眠、進食、活動）下的心率變化。能提供量化的 VPCs 數據，亦為特定遺傳性心臟病（如拳師犬 ARVC、杜賓犬 DCM）的常規篩檢項目。</li>
+                                        <li><strong class="text-gray-900">限制：</strong> 對於數週或數月才發作一次的暈厥，24小時的記錄範圍可能無法涵蓋異常事件。此外，配戴背心與貼片對<span class="font-bold text-red-600">貓咪或較敏感的犬隻</span>易造成緊迫，可能導致動物降低活動量，間接影響臨床評估的代表性。</li>
+                                        <li><strong class="text-gray-900">設備與臨床限制：</strong> 雖部分高階設備（如 DR400）具備多日記錄的電力，但受限於動物皮毛特性、出油與日常活動，<span class="font-bold text-blue-700">體表貼片實務上難以長時間維持穩定黏性與良好訊號品質</span>。</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded border border-blue-200 text-sm h-fit">
+                                    <strong class="text-blue-800">💡 觀念比喻：</strong><br>
+                                    這就像讓毛孩穿上帶有「連續監視器」的背心回家，以觀察一整天的日常心跳變化。雖然機器電力可以支持很多天，但毛孩活動和出油容易讓貼片脫落或訊號模糊。如果毛孩很排斥穿衣服，或者發作頻率很低，就需要評估更長期的紀錄方式。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. 皮下植入式心律紀錄器 (ILR) -->
+                    <div class="border-2 border-purple-500 rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-purple-100 px-5 py-3 border-b border-purple-300 flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-purple-900">3. 皮下植入式心律紀錄器 (ILR, 如 Reveal LINQ)</h3>
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">紀錄時間：最長可達 3 年</span>
+                        </div>
+                        <div class="p-5">
+                            <p class="text-gray-700 mb-4"><strong>📍 臨床定位：</strong> 針對「低頻率、間歇性、偶發性」不明原因暈厥的重要輔助診斷工具。適用於容易因穿戴 Holter 產生緊迫的動物（如多數貓咪），或需長期客觀監控抗心律不整藥效的病患。</p>
+                            
+                            <!-- 視覺化輔助 (影像) -->
+                            <div class="flex flex-col sm:flex-row gap-4 mb-6 items-center justify-center bg-white p-4 rounded-lg border border-purple-100 shadow-sm">
+                                <figure class="flex flex-col items-center">
+                                    <img src="https://www.dicardiology.com/sites/default/files/styles/content_feed_large_new/public/field/image/X0000_Medtronic_RevealXT_LINQ%20in%20hand.jpg?itok=ltEvKcag" alt="" class="rounded-lg shadow h-32 md:h-40 object-contain border border-gray-100" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Unavailable';">
+                                    <figcaption class="text-xs text-gray-500 mt-2 font-medium">實際大小對比 (體積僅約 1.2cc)</figcaption>
+                                </figure>
+                                <figure class="flex flex-col items-center">
+                                    <img src="https://www.researchgate.net/profile/Anne-Aamodt/publication/331896371/figure/fig1/AS:747956042997763@1555338025653/Reveal-LINQ-V-R-insertable-cardiac-monitor-The-left-picture-shows-the-loop-recorder-that_W640.jpg" alt="" class="rounded-lg shadow h-32 md:h-40 object-contain border border-gray-100" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x200?text=Image+Unavailable';">
+                                    <figcaption class="text-xs text-gray-500 mt-2 font-medium">Reveal LINQ 裝置外觀</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-bold text-purple-800 mb-2">✨ 設備特性 (以 Reveal LINQ 為例)：</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                                        <li><strong>體積極小：</strong> 體積約 1.2cc（約 AAA 電池的 1/3 大小），重量約 2.5g，可降低植入後的異物感。</li>
+                                        <li><strong>降低外在緊迫：</strong> 經門診微創處置（切口 < 1cm）植入皮下，可避免因反覆穿脫 Holter 背心而造成的緊迫反應。</li>
+                                        <li><strong>長效與相容性：</strong> 電池壽命最長可達 3 年，且相容於 1.5T 與 3.0T MRI 影像檢查。</li>
+                                        <li><strong>自動偵測功能：</strong> 內建演算法可偵測並記錄心室率過快 (Tachycardia)、過慢 (Bradycardia)、竇性停搏 (Pause > 3秒) 及心房顫動 (AF) 等事件。</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                    <h4 class="font-bold text-purple-900 mb-2">📱 輔助紀錄與資料傳輸功能：</h4>
+                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
+                                        <li><strong>症狀標記器 (Symptom Marker)：</strong> 當家長目擊動物出現暈厥或虛弱等症狀時，可透過專屬遙控器標記該時間點。醫師後續可針對該標記時段的心電圖進行分析，以釐清症狀是否由心律異常引起。</li>
+                                        <li><strong>遠端監測系統：</strong> 搭配居家傳輸設備，資料能透過行動通訊進行遠端上傳，協助醫師追蹤數據並降低病患往返醫院的頻率。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-purple-100 p-3 rounded border border-purple-300 text-sm">
+                                <strong class="text-purple-900">💡 觀念比喻：</strong><br>
+                                這類似於在毛孩皮下放置一個微型的「行車紀錄器」，它可以連續三年全天候記錄心律。當家長在家目擊毛孩出現狀況時，按下遙控器就能鎖定當時的心電圖。對於幾個月才發作一次的狀況，或是容易因為穿戴設備而緊張的動物，這是一個能幫助長期且客觀釐清病因的追蹤選項。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <footer class="mt-8 text-center text-sm text-gray-500">
+            <p>※ 此指南供獸醫臨床專業人員參考，具體治療決策請依據動物實際狀況及醫師專業判斷。</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        function switchTab(tabId) {
+            // 隱藏所有 tab content
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+            
+            // 重置所有按鈕樣式
+            document.querySelectorAll('[role="tab"]').forEach(el => {
+                el.classList.remove('border-blue-600', 'text-blue-600', 'bg-blue-50');
+                el.classList.add('text-gray-500', 'border-transparent', 'hover:text-gray-600', 'hover:bg-gray-50');
+            });
+            
+            // 顯示目標 tab content
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById(tabId).classList.add('block');
+            
+            // 啟動目標按鈕樣式
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-gray-500', 'border-transparent', 'hover:text-gray-600', 'hover:bg-gray-50');
+            activeBtn.classList.add('border-blue-600', 'text-blue-600', 'bg-blue-50');
+        }
+    </script>
+</body>
+</html>
