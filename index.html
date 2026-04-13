@@ -191,7 +191,7 @@
                             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
                                 <h4 class="text-lg font-bold text-green-800 mb-2">🔍 診斷與治療前必要步驟</h4>
                                 <ol class="list-decimal pl-5 space-y-2 text-green-900 text-sm">
-                                    <li><strong>Atropine Response Test (阿托品試驗)：</strong>給予 Atropine (0.02-0.04 mg/kg IV/IM)。若心律恢復正常，提示為「迷走神經性」；若無顯著反應，則高度懷疑為「結構性/病理性」阻滯。</li>
+                                    <li><strong>Atropine Response Test (阿托品試驗)：</strong>給予 Atropine (0.02-0.04 mg/kg IV/IM) 或 Glycopyrrolate。若心律恢復正常，提示為「迷走神經性」；若無顯著反應，則高度懷疑為「結構性/病理性」阻滯。</li>
                                     <li><strong>急診血檢 (基礎生化與電解質)：</strong><span class="text-red-600 font-semibold">【絕對必要】</span>需立即排除具生命威脅之高血鉀症 (Hyperkalemia)。</li>
                                     <li><strong>詳細用藥史：</strong>確認家長是否誤餵人類心血管藥物，或動物本身正服用降血壓/心臟相關藥物。</li>
                                     <li><strong>傳染病篩檢：</strong>若伴隨發燒或肝腎指數異常，建議進行鉤端螺旋體、萊姆病、查加斯病等相關篩檢。</li>
@@ -367,7 +367,7 @@
                                     <li><strong>觸診膀胱與急診血檢：</strong><span class="text-red-600 font-semibold">【第一優先】</span>應立即觸診膀胱是否脹大堅硬，並採血檢驗鉀離子 (Potassium)。若鉀超標，優先給予 Calcium gluconate。</li>
                                     <li><strong>確認是否為心房靜止：</strong>ECG 若呈現心搏過緩、無 P 波、寬 QRS 及高聳 T 波，高度強烈暗示高血鉀症。</li>
                                     <li><strong>臨床症狀與長期監控 (SDM)：</strong>確診進階 2 度或 3 度 AV block 後，若心跳仍 >100 bpm 且無暈厥症狀，雖暫不需手術，但<span class="text-red-600 font-semibold">建議建立追蹤計畫</span>。由於家長在家較難第一時間察覺心率變化，建議定期安排 <strong>Holter 監測</strong>。若診間僅見偶發 2 度阻滯但動物有不明原因暈厥，可考慮裝置<strong>皮下植入式心電圖紀錄器 (ILR, 例如 Medtronic LINQ)</strong> 進行長期追蹤，以釐清暈厥原因並確保安全性。</li>
-                                    <li><strong>Atropine 試驗：</strong>若已排除高血鉀且體溫正常，可給予 Atropine 測試是否為迷走神經張力過高所致。</li>
+                                    <li><strong>Atropine / Glycopyrrolate 試驗：</strong>若已排除高血鉀且體溫正常，可給予抗膽鹼藥物測試是否為迷走神經張力過高所致。</li>
                                 </ol>
                             </div>
                         </div>
@@ -599,15 +599,49 @@
                                         <li><strong>體積極小：</strong> 體積約 1.2cc（約 AAA 電池的 1/3 大小），重量約 2.5g，可降低植入後的異物感。</li>
                                         <li><strong>降低外在緊迫：</strong> 經門診微創處置（切口 < 1cm）植入皮下，可避免因反覆穿脫 Holter 背心而造成的緊迫反應。</li>
                                         <li><strong>長效與相容性：</strong> 電池壽命最長可達 3 年，且相容於 1.5T 與 3.0T MRI 影像檢查。</li>
-                                        <li><strong>自動偵測功能：</strong> 內建演算法可偵測並記錄心室率過快 (Tachycardia)、過慢 (Bradycardia)、竇性停搏 (Pause > 3秒) 及心房顫動 (AF) 等事件。</li>
+                                        <li><strong>自動偵測客製化：</strong> 內建演算法可偵測心室率過快 (Tachycardia)、過慢 (Bradycardia)、竇性停搏 (Pause) 及心房顫動 (AF)。
+                                            <div class="bg-white border border-purple-200 rounded p-3 mt-2 text-gray-700 shadow-sm">
+                                                <span class="text-purple-700 font-semibold mb-1 block">【小動物專屬 Tachy 偵測設定範例】</span>
+                                                犬貓正常心率與人類差異大，醫師可針對體型與物種自訂「心搏過速 (Tachy)」的觸發閾值與持續拍數，以確保精準捕捉並減少生理性雜訊：
+                                                <ul class="list-disc pl-4 mt-1 space-y-1 text-xs">
+                                                    <li><strong>大型犬：</strong>基礎心率較慢，閾值多設定於 <strong>>160 或 180 bpm</strong>（持續 16 拍）。</li>
+                                                    <li><strong>小型犬：</strong>日常活動心率較高，閾值常需調升至 <strong>>200 或 220 bpm</strong>。</li>
+                                                    <li><strong>貓咪：</strong>極易因緊迫產生生理性頻脈，閾值通常設定於 <strong>>220 甚至 240 bpm</strong>，並可視情況延長觸發的拍數條件（如持續 24 或 32 拍），以過濾掉單純的緊張喘息。</li>
+                                                </ul>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                                    <h4 class="font-bold text-purple-900 mb-2">📱 輔助紀錄與資料傳輸功能：</h4>
-                                    <ul class="list-disc pl-5 text-sm text-gray-700 space-y-2">
-                                        <li><strong>症狀標記器 (Symptom Marker)：</strong> 當家長目擊動物出現暈厥或虛弱等症狀時，可透過專屬遙控器標記該時間點。醫師後續可針對該標記時段的心電圖進行分析，以釐清症狀是否由心律異常引起。</li>
-                                        <li><strong>遠端監測系統：</strong> 搭配居家傳輸設備，資料能透過行動通訊進行遠端上傳，協助醫師追蹤數據並降低病患往返醫院的頻率。</li>
-                                    </ul>
+                                    <h4 class="font-bold text-purple-900 mb-3">📱 輔助紀錄與資料傳輸功能：</h4>
+                                    
+                                    <div class="mb-4">
+                                        <h5 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><span class="mr-1">🔘</span> 症狀標記遙控器 (Symptom Marker)</h5>
+                                        <div class="flex flex-col lg:flex-row gap-4 items-start mt-2">
+                                            <div class="flex-1 text-sm text-gray-700 space-y-2">
+                                                <p>當家長目擊動物出現暈厥、虛弱等異常症狀時，按下專屬遙控器，系統即會鎖定並儲存該時間點<strong>「前後」</strong>的心電圖。</p>
+                                                <div class="bg-purple-50 border border-purple-100 p-2 rounded">
+                                                    <span class="text-purple-700 font-semibold block mb-1">【客製化回溯時間與儲存筆數】</span>
+                                                    <p class="text-xs text-gray-600 mb-1">每次按下按鈕，系統會固定記錄「按下後 <strong>1 分鐘</strong>」的心律。而「按下前」的回溯時間，醫師可依據家長的反應速度，在系統中進行三種模式的客製化調整：</p>
+                                                    <ul class="list-disc pl-4 space-y-1 text-xs text-gray-700">
+                                                        <li><strong>保留 4 筆記錄：</strong> 每筆記錄按下前 <strong>6.5 分鐘</strong> ＋ 按下後 1 分鐘。</li>
+                                                        <li><strong>保留 3 筆記錄：</strong> 每筆記錄按下前 <strong>9 分鐘</strong> ＋ 按下後 1 分鐘。</li>
+                                                        <li><strong>保留 2 筆記錄：</strong> 每筆記錄按下前 <strong>14 分鐘</strong> ＋ 按下後 1 分鐘。</li>
+                                                    </ul>
+                                                </div>
+                                                <p class="text-xs text-gray-600 mt-1">這項強大的<strong>回溯機制</strong>能確保即使家長手忙腳亂、晚了幾分鐘才按下按鈕，依然能精準保存發作瞬間的真實狀況。</p>
+                                            </div>
+                                            <figure class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0">
+                                                <img src="https://media.cuh.nhs.uk/images/Reveal_LINQ4.width-840.jpg" alt="" class="rounded shadow border border-purple-100 object-cover w-full" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Image+Unavailable';">
+                                                <figcaption class="text-[10px] text-gray-500 mt-1 text-center font-medium">Symptom Marker 遙控器</figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="border-t border-purple-200 pt-3">
+                                        <h5 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><span class="mr-1">📡</span> 遠端監測系統 (如 MyCareLink)</h5>
+                                        <p class="text-sm text-gray-700 mt-1">搭配居家傳輸基座 (Patient Monitor)，在家長將設備<strong>保持插電且具備通訊網路連線</strong>的狀態下，系統<strong>每天會自動</strong>將記錄到的異常心律事件 (Events) 上傳至醫療雲端。醫師可遠端登入系統追蹤數據，大幅減少病患為讀取資料而非必要往返醫院的緊迫與奔波。</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -648,6 +682,12 @@
                             </div>
                             <!-- Drug Item -->
                             <div class="border border-gray-100 p-4 rounded bg-gray-50">
+                                <h4 class="font-bold text-blue-600 text-lg mb-1">Glycopyrrolate (格隆溴銨)</h4>
+                                <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> 與 Atropine 同屬抗膽鹼藥物，用於治療迷走神經張力過高所引起的<strong>竇性心搏過緩</strong>與房室傳導阻滯。</p>
+                                <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 相比 Atropine，其作用起始時間較慢，但<strong>藥效維持時間更長</strong>，且不穿透血腦障壁（無中樞神經副作用）。常替代 Atropine 用於需要較長時效或於麻醉前給藥的病患。</p>
+                            </div>
+                            <!-- Drug Item -->
+                            <div class="border border-gray-100 p-4 rounded bg-gray-50">
                                 <h4 class="font-bold text-green-600 text-lg mb-1">Calcium Gluconate (葡萄糖酸鈣)</h4>
                                 <p class="text-sm text-gray-700 mb-2"><strong>適應症：</strong> <strong>高血鉀症</strong>（如貓泌尿道阻塞）引發的心房靜止與心搏過緩的「保命藥」。</p>
                                 <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 不降鉀，但能穩定心肌細胞膜電位，爭取時間進行輸液與解除尿道阻塞。需緩慢靜脈推注並同步監控 ECG 以防心跳過慢。</p>
@@ -659,7 +699,7 @@
                                 <p class="text-xs text-gray-600 border-t pt-2 mt-2"><strong class="text-gray-800">臨床注意：</strong> 具備負性肌力作用，若動物正處於急性鬱血性心衰竭狀態，使用時需極度謹慎評估血壓與收縮功能。</p>
                             </div>
                         </div>
-                        <div class="bg-gray-100 p-3 text-sm border-t border-gray-200">
+                        <div class="bg-gray-100 p-3 text-sm border-t border-gray-200 mt-4">
                             <strong class="text-gray-800">💡 觀念比喻 (向家長說明)：</strong><br>
                             「這些急診點滴就像是心臟的『滅火器』，主要用來在危急時刻迅速把亂跳的心臟穩定下來。等毛孩狀況穩定後，我們還是需要轉換成居家的口服藥來長期保養。」
                         </div>
